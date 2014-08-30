@@ -48,6 +48,13 @@ RUN apt-get install -y fcitx
 # Install Chinese fonts
 RUN apt-get install -y ttf-wqy-microhei ttf-wqy-zenhei
 
+# Install Node.js and NPM
+RUN apt-get update
+RUN apt-get install -y nodejs-legacy
+RUN apt-get install -y npm
+
+# Install translate in command line
+RUN npm -g install fanyi
 
 # jieba
 # currently install from file
