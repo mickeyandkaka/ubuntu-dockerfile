@@ -1,0 +1,54 @@
+# Install vim
+RUN apt-get install -y vim
+
+
+# Install git
+RUN apt-get install -y git
+
+# Install ssh
+RUN apt-get install -y ssh
+
+
+# Install pip3
+RUN apt-get install -y python3-pip
+
+
+# Install build-essencial
+RUN apt-get install -y build-essential
+
+
+# Install mysql
+RUN apt-get install -y mysql-server mysql-client
+
+
+# Install redis
+RUN apt-get install -y redis-server
+
+
+# Install redis-py
+RUN pip3 install redis
+
+
+# install sqlalchemy , werkzeug , mysql related
+RUN apt-get install -y python3-sqlalchemy python3-werkzeug python3-mysql.connector
+
+
+# Install sublime-text-2
+RUN add-apt-repository -y ppa:webupd8team/sublime-text-2
+RUN apt-get update
+RUN apt-get install -y sublime-text
+
+
+# Install fcitx
+RUN add-apt-repository -y ppa:fcitx-team/nightly
+RUN apt-get update
+RUN apt-get install -y fcitx
+
+
+# Install Chinese fonts
+RUN apt-get install -y ttf-wqy-microhei ttf-wqy-zenhei
+
+
+# jieba
+# currently install from file
+# RUN pip3 install jieba
