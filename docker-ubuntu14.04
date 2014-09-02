@@ -1,36 +1,40 @@
 # Install vim
 RUN apt-get install -y vim
 
-
 # Install git
 RUN apt-get install -y git
 
 # Install ssh
 RUN apt-get install -y ssh
 
-
-# Install pip3
-RUN apt-get install -y python3-pip
+# Install screen
+RUN apt-get install -y screen
 
 
 # Install build-essencial
 RUN apt-get install -y build-essential
 
 
+# Install pip3
+RUN apt-get install -y python3-pip
+
+
 # Install mysql
 RUN apt-get install -y mysql-server mysql-client
 
 
-# Install redis
-RUN apt-get install -y redis-server
+# install sqlalchemy , werkzeug , mysql related
+RUN apt-get install -y python3-sqlalchemy python3-werkzeug python3-mysql.connector
 
+# Install jieba
+RUN pip3 install jieba3k
+
+# Install redis
+# may use other source
+# RUN apt-get install -y redis-server
 
 # Install redis-python interface 
 RUN pip3 install redis
-
-
-# install sqlalchemy , werkzeug , mysql related
-RUN apt-get install -y python3-sqlalchemy python3-werkzeug python3-mysql.connector
 
 
 # Install sublime-text-2
@@ -56,5 +60,4 @@ RUN apt-get install -y npm
 # Install translate in command line
 RUN npm -g install fanyi
 
-# jieba
-RUN pip3 install jieba3k
+
