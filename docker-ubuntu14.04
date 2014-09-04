@@ -36,6 +36,8 @@ RUN pip3 install jieba3k
 # Install redis-python interface 
 RUN pip3 install redis
 
+# Install beautifulsoup
+RUN pip3 install beautifulsoup4
 
 # Install sublime-text-2
 RUN add-apt-repository -y ppa:webupd8team/sublime-text-2
@@ -60,4 +62,5 @@ RUN apt-get install -y npm
 # Install translate in command line
 RUN npm -g install fanyi
 
-
+# Install octave
+RUN apt-get install -y octave
